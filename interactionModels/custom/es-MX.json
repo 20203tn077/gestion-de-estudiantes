@@ -1,0 +1,402 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "studentName",
+              "elicitationRequired": true,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.368783695551.114781589311",
+                "confirmation": "Confirm.Slot.368783695551.114781589311"
+              }
+            },
+            {
+              "name": "studentId",
+              "elicitationRequired": true,
+              "type": "AMAZON.AlphaNumeric",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.368783695551.1047262225554",
+                "confirmation": "Confirm.Slot.368783695551.1047262225554"
+              }
+            },
+            {
+              "name": "group",
+              "elicitationRequired": true,
+              "type": "AMAZON.AlphaNumeric",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.368783695551.1467098751811",
+                "confirmation": "Confirm.Slot.368783695551.1467098751811"
+              }
+            }
+          ],
+          "name": "AddStudentToGroupIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.368783695551"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "group",
+              "elicitationRequired": true,
+              "type": "AMAZON.AlphaNumeric",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.262057052858.1141037739606"
+              }
+            }
+          ],
+          "name": "GetStudentCountByGroupIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "group",
+              "elicitationRequired": true,
+              "type": "AMAZON.AlphaNumeric",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.665738401645.929035612963"
+              }
+            }
+          ],
+          "name": "GetStudentsByGroupIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "studentName",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "es {studentName}",
+                "su nombre es {studentName}",
+                "se llama {studentName}"
+              ]
+            },
+            {
+              "name": "studentId",
+              "type": "AMAZON.AlphaNumeric",
+              "samples": [
+                "la matrícula es {studentId}",
+                "es {studentId}"
+              ]
+            },
+            {
+              "name": "group",
+              "type": "AMAZON.AlphaNumeric",
+              "samples": [
+                "a {group}",
+                "al grupo {group}"
+              ]
+            }
+          ],
+          "name": "AddStudentToGroupIntent",
+          "samples": [
+            "Agregar a {studentName} con matrícula {studentId} al grupo {group}",
+            "Agrega a {studentName} con matrícula {studentId} al grupo {group}",
+            "Agregar al estudiante {studentName} con matrícula {studentId} al grupo {group}",
+            "Agregar al estudiante con nombre {studentName} y matrícula {studentId} al grupo {group}",
+            "Agrega al estudiante {studentName} con matrícula {studentId} al grupo {group}",
+            "Agrega al estudiante con nombre {studentName} y matrícula {studentId} al grupo {group}",
+            "Agregar al grupo {group} a {studentName} con matrícula {studentId}",
+            "Agrega al grupo {group} a {studentName} con matrícula {studentId}",
+            "Agregar al grupo {group} al estudiante {studentName} con matrícula {studentId}",
+            "Agrega al grupo {group} al estudiante {studentName} con matrícula {studentId}",
+            "Agregar al grupo {group} al estudiante con nombre {studentName} y matrícula {studentId}",
+            "Agrega al grupo {group} al estudiante con nombre {studentName} y matrícula {studentId}",
+            "Agregar estudiante al grupo {group}",
+            "Agregar un estudiante al grupo {group}",
+            "Agrega un estudiante al grupo {group}",
+            "Agregar un estudiante",
+            "Agrega un estudiante",
+            "Agregar nuevo estudiante al grupo {group}",
+            "Agregar un nuevo estudiante al grupo {group}",
+            "Agrega un nuevo estudiante al grupo {group}",
+            "Agregar un nuevo estudiante",
+            "Agrega un nuevo estudiante"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "group",
+              "type": "AMAZON.AlphaNumeric",
+              "samples": [
+                "de {group}",
+                "del grupo {group}"
+              ]
+            }
+          ],
+          "name": "GetStudentCountByGroupIntent",
+          "samples": [
+            "Cuántos estudiantes tengo en el grupo {group}",
+            "Cuántos estudiantes hay en el grupo {group}",
+            "Cuántos estudiantes se encuentran en el grupo {group}",
+            "Cuál es la cantidad de estudiantes que tengo en el grupo {group}",
+            "Cuál es la cantidad de estudiantes que hay en el grupo {group}",
+            "Cuál es la cantidad de estudiantes que se encuentran en el grupo {group}",
+            "Cuál es el número de estudiantes que tengo en el grupo {group}",
+            "Cuál es el número de estudiantes que hay en el grupo {group}",
+            "Cuál es el número de estudiantes que se encuentran en el grupo {group}",
+            "Dime cuántos estudiantes tengo en el grupo {group}",
+            "Dime cuántos estudiantes hay en el grupo {group}",
+            "Dime cuántos estudiantes se encuentran en el grupo {group}",
+            "Dime la cantidad de estudiantes que tengo en el grupo {group}",
+            "Dime la cantidad de estudiantes que hay en el grupo {group}",
+            "Dime la cantidad de estudiantes que se encuentran en el grupo {group}",
+            "Dime el número de estudiantes que tengo en el grupo {group}",
+            "Dime el número de estudiantes que hay en el grupo {group}",
+            "Dime el número de estudiantes que se encuentran en el grupo {group}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "group",
+              "type": "AMAZON.AlphaNumeric",
+              "samples": [
+                "del {group}",
+                "del grupo {group}"
+              ]
+            }
+          ],
+          "name": "GetStudentsByGroupIntent",
+          "samples": [
+            "Qué estudiantes tengo en el grupo {group}",
+            "Qué estudiantes hay en el grupo {group}",
+            "Qué estudiantes se encuentran en el grupo {group}",
+            "Lista los estudiantes del grupo {group}",
+            "Dime qué estudiantes tengo en el grupo {group}",
+            "Dime qué estudiantes hay en el grupo {group}",
+            "Dime qué estudiantes se encuentran en el grupo {group}",
+            "Dame la lista de los estudiantes del grupo {group}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetStudentCountIntent",
+          "samples": [
+            "Cuántos estudiantes tengo en mis grupos",
+            "Cuántos estudiantes hay en mis grupos",
+            "Cuántos estudiantes se encuentran en mis grupos",
+            "Cuál es la cantidad de estudiantes que tengo en mis grupos",
+            "Cuál es la cantidad de estudiantes que hay en mis grupos",
+            "Cuál es la cantidad de estudiantes que se encuentran en mis grupos",
+            "Cuál es el número de estudiantes que tengo en mis grupos",
+            "Cuál es el número de estudiantes que hay en mis grupos",
+            "Cuál es el número de estudiantes que se encuentran en mis grupos",
+            "Dime cuántos estudiantes tengo en mis grupos",
+            "Dime cuántos estudiantes hay en mis grupos",
+            "Dime cuántos estudiantes se encuentran en mis grupos",
+            "Dime la cantidad de estudiantes que tengo en mis grupos",
+            "Dime la cantidad de estudiantes que hay en mis grupos",
+            "Dime la cantidad de estudiantes que se encuentran en mis grupos",
+            "Dime el número de estudiantes que tengo en mis grupos",
+            "Dime el número de estudiantes que hay en mis grupos",
+            "Dime el número de estudiantes que se encuentran en mis grupos",
+            "Cuántos estudiantes tengo en todos mis grupos",
+            "Cuántos estudiantes hay en todos mis grupos",
+            "Cuántos estudiantes se encuentran en todos mis grupos",
+            "Cuál es la cantidad de estudiantes que tengo en todos mis grupos",
+            "Cuál es la cantidad de estudiantes que hay en todos mis grupos",
+            "Cuál es la cantidad de estudiantes que se encuentran en todos mis grupos",
+            "Cuál es el número de estudiantes que tengo en todos mis grupos",
+            "Cuál es el número de estudiantes que hay en todos mis grupos",
+            "Cuál es el número de estudiantes que se encuentran en todos mis grupos",
+            "Dime cuántos estudiantes tengo en todos mis grupos",
+            "Dime cuántos estudiantes hay en todos mis grupos",
+            "Dime cuántos estudiantes se encuentran en todos mis grupos",
+            "Dime la cantidad de estudiantes que tengo en todos mis grupos",
+            "Dime la cantidad de estudiantes que hay en todos mis grupos",
+            "Dime la cantidad de estudiantes que se encuentran en todos mis grupos",
+            "Dime el número de estudiantes que tengo en todos mis grupos",
+            "Dime el número de estudiantes que hay en todos mis grupos",
+            "Dime el número de estudiantes que se encuentran en todos mis grupos",
+            "Cuántos estudiantes tengo en todos los grupos",
+            "Cuántos estudiantes hay en todos los grupos",
+            "Cuántos estudiantes se encuentran en todos los grupos",
+            "Cuál es la cantidad de estudiantes que tengo en todos los grupos",
+            "Cuál es la cantidad de estudiantes que hay en todos los grupos",
+            "Cuál es la cantidad de estudiantes que se encuentran en todos los grupos",
+            "Cuál es el número de estudiantes que tengo en todos los grupos",
+            "Cuál es el número de estudiantes que hay en todos los grupos",
+            "Cuál es el número de estudiantes que se encuentran en todos los grupos",
+            "Dime cuántos estudiantes tengo en todos los grupos",
+            "Dime cuántos estudiantes hay en todos los grupos",
+            "Dime cuántos estudiantes se encuentran en todos los grupos",
+            "Dime la cantidad de estudiantes que tengo en todos los grupos",
+            "Dime la cantidad de estudiantes que hay en todos los grupos",
+            "Dime la cantidad de estudiantes que se encuentran en todos los grupos",
+            "Dime el número de estudiantes que tengo en todos los grupos",
+            "Dime el número de estudiantes que hay en todos los grupos",
+            "Dime el número de estudiantes que se encuentran en todos los grupos"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "gestión de estudiantes"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cómo se llama el estudiante?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es el nombre del estudiante?"
+          }
+        ],
+        "id": "Elicit.Slot.368783695551.114781589311"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "El nombre del estudiante es {studentName}, ¿escuché bien?"
+          },
+          {
+            "type": "PlainText",
+            "value": "El nombre del estudiante es {studentName}, ¿es correcto?"
+          }
+        ],
+        "id": "Confirm.Slot.368783695551.114781589311"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la matrícula del estudiante?"
+          }
+        ],
+        "id": "Elicit.Slot.368783695551.1047262225554"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "La matrícula es {studentId}, ¿escuché bien?"
+          },
+          {
+            "type": "PlainText",
+            "value": "La matrícula es {studentId}, ¿es correcto?"
+          }
+        ],
+        "id": "Confirm.Slot.368783695551.1047262225554"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿A qué grupo quieres que agrege al nuevo estudiante?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿A qué grupo quieres que agrege a {studentName} ?"
+          }
+        ],
+        "id": "Elicit.Slot.368783695551.1467098751811"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "El grupo es {group}, ¿escuché bien?"
+          },
+          {
+            "type": "PlainText",
+            "value": "El grupo es {group}, ¿es correcto?"
+          }
+        ],
+        "id": "Confirm.Slot.368783695551.1467098751811"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Se agregará al estudiante {studentName} al grupo {group} con matrícula {studentId}, ¿estás de acuerdo?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Se agregará al grupo {group} al estudiante {studentName} con matrícula {studentId} , ¿estás de acuerdo?"
+          }
+        ],
+        "id": "Confirm.Intent.368783695551"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿De qué grupo quieres que te dé la cantidad de estudiantes?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿De qué grupo quieres saber la cantidad de estudiantes?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿De qué grupo quieres que te dé el número de estudiantes?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿De qué grupo quieres saber el número de estudiantes?"
+          }
+        ],
+        "id": "Elicit.Slot.262057052858.1141037739606"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿De qué grupo quieres que te dé los estudiantes?"
+          }
+        ],
+        "id": "Elicit.Slot.665738401645.929035612963"
+      }
+    ]
+  }
+}
